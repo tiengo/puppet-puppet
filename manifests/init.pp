@@ -23,6 +23,9 @@
 #   FQDN of the puppet server. Default: puppet.$domain or just puppet
 #   if $domain fact is blank
 #
+# [*environmentpath*]
+#   The default environmentpath set in puppet.conf. Default: nil
+#
 # [*environment*]
 #   The default environment set in puppet.conf. Default: production
 #
@@ -378,6 +381,7 @@ class puppet (
   $enc_backup          = params_lookup( 'enc_backup' ),
   $mode                = params_lookup( 'mode' ),
   $server              = params_lookup( 'server' ),
+  $environmentpath     = params_lookup( 'environmentpath' ),
   $environment         = params_lookup( 'environment' ),
   $master_environment  = params_lookup( 'master_environment' ),
   $allow               = params_lookup( 'allow' ),

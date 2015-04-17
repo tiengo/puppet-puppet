@@ -76,6 +76,9 @@
   autosign = <%= scope.lookupvar('puppet::autosign') %>
 <% end -%>
 
+<% if scope.lookupvar('puppet::environmentpath') != '' -%>
+  environmentpath = <%= scope.lookupvar('puppet::environmentpath') %>
+<% end -%>
   environment = <%= scope.lookupvar('puppet::environment') %>
   manifest    = <%= scope.lookupvar('puppet::manifest_path') %>
   modulepath  = <%= scope.lookupvar('puppet::module_path') %>
